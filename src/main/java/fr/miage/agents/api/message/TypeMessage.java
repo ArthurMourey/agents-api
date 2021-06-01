@@ -1,20 +1,46 @@
 package fr.miage.agents.api.message;
 
-import fr.miage.agents.api.message.reponse.ResultatNegociation;
-import fr.miage.agents.api.message.reponse.ResultatRecherche;
-
 /**
  * Created by nitix on 14/11/16.
  */
 public enum TypeMessage {
 
-    Achat,
-    Aide,
-    DemandeDistance,
+    //Session
+    DemanderSession,
+    ResultatDemandeSession,
+
+    //Négociation
+    InitierAchat,
+    ResultatInitiationAchat,
     NegocierPrix,
-    PrevenirSolde,
+    ResultatNegociation,
+    AnnulerAchat,
+    ResultatAnnulationAchat,
+    FinaliserAchat,
+    ResultatFinalisationAchat,
+
+    //Recherche
     Recherche,
 
     ResultatRecherche,
-    ResultatNegociation;
+
+    //Util
+    Aide,
+    DemandeCategorie,
+    DemandeDistance,
+    PrevenirSolde,
+    ResultatCategorie,
+    AppelMethodeIncorrect,
+    ResultatAide,
+
+    //interClients
+    DemandeEchange,
+    ReponseEchange,
+
+    //Production
+    Production,
+	
+	//Courses
+	AchatClient,
+	ResultatAchatClient;
 }
